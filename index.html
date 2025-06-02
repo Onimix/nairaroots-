@@ -2,159 +2,287 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NairaRoots - By Onimix</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+ <meta name="description" content="NairaRoots helps Nigerians discover affiliate marketing, digital products, and ways to make money online with expert tips and tools." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000; /* black background */
+      color: #D4AF37; /* golden text */
+    }
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      color: #D4AF37; /* golden headings */
+    }
+    a {
+      color: #D4AF37;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .btn-gold {
+      background-color: #D4AF37;
+      color: #000;
+      transition: background-color 0.3s ease;
+    }
+    .btn-gold:hover {
+      background-color: #b7962e;
+      color: #fff;
+    }
+    .section-bg-black {
+      background-color: #000;
+      color: #D4AF37;
+    }
+    .section-bg-darkgray {
+      background-color: #111;
+      color: #D4AF37;
+    }
+    .card {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 15px #D4AF37aa;
+      color: #D4AF37;
+    }
+    img.rounded-full {
+      border: 3px solid #D4AF37;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
-
-  <header class="bg-white shadow p-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-green-600">NairaRoots</h1>
-    <nav>
-      <ul class="flex space-x-4">
-        <li><a href="#about" class="hover:text-green-500">About</a></li>
-        <li><a href="#blog" class="hover:text-green-500">Blog</a></li>
-        <li><a href="#recommended-affiliates" class="hover:text-green-500">Recommended Affiliates</a></li>
-        <li><a href="#products" class="hover:text-green-500">Products</a></li>
-        <li><a href="#contact" class="hover:text-green-500">Contact</a></li>
-      </ul>
-    </nav>
+<body>
+  <!-- Header with 3D Blue Background -->
+  <header class="py-6 bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 shadow-lg shadow-blue-500/40">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">NairaRoots</h1>
+      <nav class="space-x-6">
+        <a href="#blog" class="text-yellow-300 hover:text-white font-medium">Blog</a>
+        <a href="#products" class="text-yellow-300 hover:text-white font-medium">Products</a>
+        <a href="#affiliate" class="text-yellow-300 hover:text-white font-medium">Affiliate Tools</a>
+        <a href="#about" class="text-yellow-300 hover:text-white font-medium">About</a>
+        <a href="#contact" class="text-yellow-300 hover:text-white font-medium">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="max-w-4xl mx-auto p-6">
-    <section class="my-12 text-center">
-      <h2 class="text-4xl font-extrabold mb-4">Welcome to NairaRoots</h2>
-      <p class="text-lg">A conscious platform for mastering wealth, digital income, and self-growth.</p>
-    </section>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-[#D4AF37] to-[#b7962e] text-black py-20 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-4">Turn Your Passion into Profit</h2>
+      <p class="text-lg mb-6">Discover top affiliate programs, smart money-making tips, and powerful tools on NairaRoots.</p>
+      <a href="#blog" class="inline-block btn-gold font-semibold px-6 py-3 rounded-full shadow hover:bg-[#b7962e] transition">Start Exploring</a>
+    </div>
+  </section>
 
-    <section id="about" class="my-12">
-      <h3 class="text-2xl font-semibold mb-4">About Me</h3>
-      <div class="flex flex-col md:flex-row items-center md:space-x-6">
-        <img src="images/onimix.jpg" alt="Onimix" class="w-40 h-40 rounded-full object-cover mb-4 md:mb-0" />
-        <p class="text-lg leading-relaxed">
-          I’m Onimix — a conscious creator exploring both the digital world and the deeper self. From building online income streams to decoding the mysteries of dreams, I’m on a mission to master life on my own terms — spiritually, financially, and mentally. Whether it’s blogging, automation, or self-discovery, I build with intention and live with vision.
-        </p>
+  <!-- SVG Divider -->
+  <div class="-mt-1">
+    <svg class="w-full" viewBox="0 0 1440 100"><path fill="#000" d="M0,64L1440,0L1440,320L0,320Z"></path></svg>
+  </div>
+  <!-- About Me Section -->
+  <section id="about" class="section-bg-black py-16 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">About Me</h2>
+      <img src="oni.jpg" alt="Onimix" class="w-28 h-28 mx-auto rounded-full mb-4 shadow" />
+      <p class="text-lg max-w-xl mx-auto">
+        Hi, I'm Onimix — founder of NairaRoots. I help Nigerians explore affiliate marketing, digital product creation, and real ways to make money online. I created this platform to simplify the journey for beginners and pros alike.
+      </p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="section-bg-darkgray py-16 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Digital Products</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card">
+    <h3 class="text-xl font-semibold mb-2">Affiliate Starter Toolkit</h3>
+<p class="mb-4">
+  Struggling to get affiliate sales? This toolkit gives you ready-to-use templates, email scripts, and proven traffic tips to launch and grow your affiliate business quickly. Perfect for beginners and hustlers looking to earn real money online!
+</p>
+<a href="https://wa.link/9073zd" target="_blank" class="inline-block btn-gold px-4 py-2 rounded hover:bg-[#b7962e]">
+  Buy Now - WhatsApp
+</a>
+<!-- Review 1 -->
+<div class="mt-4 bg-white border-l-4 border-yellow-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"This toolkit made affiliate marketing finally click for me. Clear steps, real Nigerian examples, and no fluff!"</p>
+  <p class="mt-2 text-sm font-semibold text-yellow-600">— Amaka T., Enugu</p>
+</div>
+
+<!-- Review 2 -->
+<div class="mt-4 bg-white border-l-4 border-blue-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"I’ve read many guides, but this one gave me actual action steps. I got 2 leads the first day I applied what I learned."</p>
+  <p class="mt-2 text-sm font-semibold text-blue-600">— David E., Abuja</p>
+</div>
+
+<!-- Review 3 -->
+<div class="mt-4 bg-white border-l-4 border-green-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"If you’re starting out with no clue, this is the course you need. Onimix made it easy to follow and implement fast."</p>
+  <p class="mt-2 text-sm font-semibold text-green-600">— Tolu A., Ibadan</p>
+</div>
+
+<!-- Review 4 -->
+<div class="mt-4 bg-white border-l-4 border-pink-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"The templates alone are worth more than the price. I used the email script and got replies from 3 prospects!"</p>
+  <p class="mt-2 text-sm font-semibold text-pink-600">— Zainab B., Kano</p>
+</div>
+
+<!-- Review 5 -->
+<div class="mt-4 bg-white border-l-4 border-purple-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"I was skeptical at first but this ebook delivered. It gave me realistic online business ideas that fit the Nigerian market."</p>
+  <p class="mt-2 text-sm font-semibold text-purple-600">— Chuka N., Port Harcourt</p>
+</div>
+
+<!-- Review 6 -->
+<div class="mt-4 bg-white border-l-4 border-red-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"The WhatsApp support alone makes this worth it. I asked a question and got a detailed reply same day."</p>
+  <p class="mt-2 text-sm font-semibold text-red-600">— Esther M., Ilorin</p>
+</div>
+
+<!-- Review 7 -->
+<div class="mt-4 bg-white border-l-4 border-indigo-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"Simple, powerful, and made for Nigerians. This guide should be in the hands of every serious hustler."</p>
+  <p class="mt-2 text-sm font-semibold text-indigo-600">— Yusuf O., Ogun</p>
+</div>
+        </div>
+        <div class="card">
+          <h3 class="text-xl font-semibold mb-2">Smart Side Hustles eBook</h3>
+          <p class="mb-4">A practical guide to online income streams that work in Nigeria.</p>
+  <a href="https://wa.link/9073zd" target="_blank" class="inline-block btn-gold px-4 py-2 rounded hover:bg-[#b7962e]">
+  Download on WhatsApp
+</a>
+<!-- Review 1 -->
+<div class="mt-4 bg-white border-l-4 border-yellow-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"This ebook opened my eyes to side hustles I never knew existed. I started one with less than ₦5k!"</p>
+  <p class="mt-2 text-sm font-semibold text-yellow-600">— Samuel O., Lagos</p>
+</div>
+
+<!-- Review 2 -->
+<div class="mt-4 bg-white border-l-4 border-green-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"I’ve bought other online guides, but this one felt like it was made for Nigerians. Straight to the point."</p>
+  <p class="mt-2 text-sm font-semibold text-green-600">— Mariam A., Abeokuta</p>
+</div>
+
+<!-- Review 3 -->
+<div class="mt-4 bg-white border-l-4 border-blue-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"The hustle ideas in here are practical, not just theory. I already made my first ₦15,000 in two weeks."</p>
+  <p class="mt-2 text-sm font-semibold text-blue-600">— Chinedu N., Enugu</p>
+</div>
+
+<!-- Review 4 -->
+<div class="mt-4 bg-white border-l-4 border-pink-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"What I love most is how Onimix breaks it down. No grammar, just pure hustle advice that works."</p>
+  <p class="mt-2 text-sm font-semibold text-pink-600">— Blessing T., Ilorin</p>
+</div>
+
+<!-- Review 5 -->
+<div class="mt-4 bg-white border-l-4 border-red-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"Thanks to this guide, I started a mini importation hustle and sold out my first batch."</p>
+  <p class="mt-2 text-sm font-semibold text-red-600">— Abdul K., Kaduna</p>
+</div>
+
+<!-- Review 6 -->
+<div class="mt-4 bg-white border-l-4 border-indigo-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"The WhatsApp community link inside the ebook gave me massive support. Highly recommend."</p>
+  <p class="mt-2 text-sm font-semibold text-indigo-600">— Tolu F., Ibadan</p>
+</div>
+
+<!-- Review 7 -->
+<div class="mt-4 bg-white border-l-4 border-purple-400 p-4 rounded shadow-sm">
+  <p class="text-gray-700 italic">"Side hustle tips inside helped me turn my skills into cash, even without laptop or capital."</p>
+  <p class="mt-2 text-sm font-semibold text-purple-600">— Joy E., Port Harcourt</p>
+</div>
+        </div>
       </div>
-    </section>
-
-    <img src="images/oni.jpg" alt="Photo of Onimix" style="width:200px; border-radius:12px;" />
-
-    <section id="blog" class="my-12">
-      <h3 class="text-2xl font-semibold mb-4">Blog</h3>
-      <p>Coming soon: powerful posts on affiliate marketing, passive income, and more.</p>
-    </section>
-
-    <!-- Added Recommended Affiliate Programs Section -->
-    <section id="recommended-affiliates" class="my-12 bg-white shadow rounded-lg p-6">
-      <h3 class="text-2xl font-semibold mb-4 text-green-700">Recommended Affiliate Programs</h3>
-      <ul class="list-disc list-inside space-y-2 text-lg text-gray-800">
-        <li>
-          <a href="https://www.jumia.com.ng/affiliate/" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">
-            Jumia Affiliate Program
-          </a> – Earn commissions by promoting Africa’s leading online marketplace.
-        </li>
-        <li>
-          <a href="https://affiliate.konga.com/" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">
-            Konga Affiliate Program
-          </a> – Nigeria’s popular e-commerce affiliate program with good commissions.
-        </li>
-        <li>
-          <a href="https://www.clickbank.com/affiliate-program/" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">
-            ClickBank
-          </a> – Global digital product marketplace with high affiliate payouts.
-        </li>
-        <li>
-          <a href="https://www.amazon.com/associates" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">
-            Amazon Associates
-          </a> – The world’s largest affiliate program with millions of products.
-        </li>
-        <li>
-          <a href="https://www.hostgator.com/affiliates" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">
-            HostGator Affiliate Program
-          </a> – Promote web hosting and earn recurring commissions.
-        </li>
-        <li>
-          <a href="https://www.fiverr.com/affiliates" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">
-            Fiverr Affiliate Program
-          </a> – Earn by referring buyers to freelance services.
-        </li>
-        <li>
-          <a href="https://www.getresponse.com/affiliate-program" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">
-            GetResponse Affiliate Program
-          </a> – Promote email marketing tools with recurring commissions.
-        </li>
+    </div>
+  </section>
+<section id="whatsapp-channel" class="py-16 bg-black" style="color:#D4AF37;">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6" style="color:#D4AF37;">Join My Anonymous Tech WhatsApp Channel</h2>
+    <p class="mb-6 max-w-xl mx-auto" style="color:#D4AF37;">
+      Get exclusive tech tips, tutorials, and updates anonymously on WhatsApp. Stay informed and connected with the latest in tech!
+    </p>
+    <a href="https://whatsapp.com/channel/0029Vb6Hq0K7YSdCXtjgzt1x" target="_blank" rel="noopener noreferrer" class="inline-block btn-gold px-6 py-3 rounded hover:bg-[#b7962e]">
+      Join the WhatsApp Tech Channel
+    </a>
+  </div>
+</section>
+  <!-- Affiliate Tools Section -->
+  <section id="affiliate" class="section-bg-black py-16 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Top Affiliate Programs</h2>
+      <ul class="max-w-2xl mx-auto text-left space-y-2 list-disc list-inside">
+        <li><strong>Expertnaire</strong> – High-converting Nigerian digital product marketplace.</li>
+        <li><strong>Selar</strong> – Sell your own or affiliate products easily.</li>
+        <li><strong>Learnoflix</strong> – Great beginner-friendly offers & payouts.</li>
+        <li><strong>Systeme.io</strong> – Earn commissions promoting tools people actually need.</li>
+        <li><strong>Amazon KDP</strong> – Publish ebooks & earn globally.</li>
       </ul>
-    </section>
+    </div>
+  </section>
+<section id="similola-collection" class="my-8 p-6 bg-black text-[#D4AF37] rounded-lg shadow-lg">
+  <h2 class="text-2xl font-bold mb-4" style="color:#D4AF37;">SIMILOLA COLLECTION</h2>
+  <p class="mb-4" style="color:#D4AF37;">
+    Join SIMILOLA COLLECTION — Your Ultimate Style Destination!  
+    Discover the latest trendy outfits, unique designs, and affordable fashion that fits every occasion. Whether you’re looking for casual wear, party looks, or traditional styles, Similola Collection has you covered. Get exclusive deals, style tips, and connect with a community that loves fashion as much as you do!
+  </p>
+  <ul class="list-disc list-inside mb-4" style="color:#D4AF37;">
+    <li>Fresh arrivals weekly</li>
+    <li>Perfect outfits for every season</li>
+    <li>Affordable prices & special discounts</li>
+    <li>Easy ordering and fast delivery</li>
+  </ul>
+  <a href="https://chat.whatsapp.com/EEIB5slkBvNIF982hQr8Ic" target="_blank" class="inline-block btn-gold px-4 py-2 rounded hover:bg-[#b7962e]">
+    Join SIMILOLA COLLECTION
+  </a>
+</section>
 
-    <section id="free-websites" style="padding:20px; background:#f9f9f9; border-radius:8px; margin-top:30px;">
-      <h2 style="color:#e63946;">🔥 25+ FREE USEFUL WEBSITES</h2>
-      <ol style="line-height:1.8; font-size:16px;">
-        <li><a href="https://sizeasy.com" target="_blank" rel="noopener noreferrer">sizeasy.com</a> – Visualize and compare the size of any product.</li>
-        <li><a href="https://whatfontis.com" target="_blank" rel="noopener noreferrer">whatfontis.com</a> – Quickly determine the font name from an image.</li>
-        <li><a href="https://fontsquirrel.com" target="_blank" rel="noopener noreferrer">fontsquirrel.com</a> – A good collection of fonts – free for personal and commercial use.</li>
-        <li><a href="https://regex.info" target="_blank" rel="noopener noreferrer">regex.info</a> – Find data hidden in your photographs.</li>
-        <li><a href="https://tineye.com" target="_blank" rel="noopener noreferrer">tineye.com</a> – This is like an online version of Google Googles.</li>
-        <li><a href="https://iwantmyname.com" target="_blank" rel="noopener noreferrer">iwantmyname.com</a> – Helps you search domains across all TLDs.</li>
-        <li><a href="https://tabbloid.com" target="_blank" rel="noopener noreferrer">tabbloid.com</a> – Your favorite blogs delivered as PDFs.</li>
-        <li><a href="https://join.me" target="_blank" rel="noopener noreferrer">join.me</a> – Share your screen with anyone over the web.</li>
-        <li><a href="https://onlineocr.net" target="_blank" rel="noopener noreferrer">onlineocr.net</a> – Recognize text from scanned PDFs and images – see other OCR tools.</li>
-        <li><a href="https://flightstats.com" target="_blank" rel="noopener noreferrer">flightstats.com</a> – Track flight status at airports worldwide.</li>
-        <li><a href="https://wetransfer.com" target="_blank" rel="noopener noreferrer">wetransfer.com</a> – For sharing really big files online.</li>
-        <li><a href="https://pastebin.com" target="_blank" rel="noopener noreferrer">pastebin.com</a> – A temporary online clipboard for your text and code snippets.</li>
-        <li><a href="https://polishmywriting.com" target="_blank" rel="noopener noreferrer">polishmywriting.com</a> – Check your writing for spelling or grammatical errors.</li>
-        <li><a href="https://awesomehighlighter.com" target="_blank" rel="noopener noreferrer">awesomehighlighter.com</a> – Easily highlight the important parts of a web page.</li>
-        <li><a href="https://typewith.me" target="_blank" rel="noopener noreferrer">typewith.me</a> – Work on the same document with multiple people.</li>
-        <li><a href="https://whichdateworks.com" target="_blank" rel="noopener noreferrer">whichdateworks.com</a> – Planning an event? Find a date that works for all.</li>
-        <li><a href="https://everytimezone.com" target="_blank" rel="noopener noreferrer">everytimezone.com</a> – A less confusing view of the world time zones.</li>
-        <li><a href="https://mastpanel.online" target="_blank" rel="noopener noreferrer">MastPanel.online</a> – Buy any Social Media Service at cheapest rate.</li>
-        <li><a href="https://warrick.cs.odu.edu" target="_blank" rel="noopener noreferrer">warrick.cs.odu.edu</a> – You’ll need this when your bookmarked web pages are deleted.</li>
-        <li><a href="https://gtmetrix.com" target="_blank" rel="noopener noreferrer">gtmetrix.com</a> – The perfect tool for measuring your site performance online.</li>
-        <li><a href="https://imo.im" target="_blank" rel="noopener noreferrer">imo.im</a> – Chat with your buddies on Skype, Facebook, GoogleTalk, etc from one place.</li>
-        <li><a href="https://translate.google.com" target="_blank" rel="noopener noreferrer">translate.google.com</a> – Translate web pages, PDFs and Office documents.</li>
-        <li><a href="https://youtube.com/leanback" target="_blank" rel="noopener noreferrer">youtube.com/leanback</a> – Sit back and enjoy YouTube videos in full-screen mode.</li>
-        <li><a href="https://similarsites.com" target="_blank" rel="noopener noreferrer">similarsites.com</a> – Discover new sites that are similar to what you like already.</li>
-        <li><a href="https://wordle.net" target="_blank" rel="noopener noreferrer">wordle.net</a> – Quickly summarize long pieces of text with tag clouds.</li>
-        <li><a href="https://bubbl.us" target="_blank" rel="noopener noreferrer">bubbl.us</a> – Create mind-maps, brainstorm ideas in the browser.</li>
-      </ol>
-      <p style="font-size:18px;">Enjoy 👍❤️</p>
-    </section>
-
-    <section id="digital-course" class="my-12 bg-white shadow-lg rounded-lg p-6">
-      <h2 class="text-3xl font-bold text-green-700 mb-4">💼 The Ultimate Digital Hustler Bundle: 15,000,000+ PLR Assets!</h2>
-
-      <div class="space-y-4 text-lg text-gray-800">
-        <p><strong>Course Title:</strong> <span class="text-gray-900">"Digital Hustle Mastery: Learn Affiliate Marketing & Online Income Basics"</span></p>
-        <p><strong>Subtitle:</strong> <em>Master the skills to earn online from anywhere in Africa.</em></p>
-        <p><strong>Format:</strong> PDF Guide (or email/video course)</p>
-        <p><strong>Price:</strong> $30 🎁</p>
-      </div>
-
-      <div class="mt-6">
-        <a href="https://wa.link/9073zd" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white text-lg font-semibold py-3 px-6 rounded-xl transition duration-200 shadow-md">
-          📥 Download Now / Message Me to Join
-        </a>
-      </div>
-    </section>
-
-    <section id="products" class="my-12">
-      <h3 class="text-2xl font-semibold mb-4">Digital Products</h3>
-      <p>Here you'll find ebooks, courses, templates, and tools to accelerate your financial growth. Coming soon.</p>
-    </section>
-
-    <section id="contact" class="my-12">
-      <h3 class="text-2xl font-semibold mb-4">Contact</h3>
-      <ul class="space-y-2 text-lg">
-        <li>Email: <a href="mailto:mumeenonimisi@gmail.com" class="text-green-600 hover:underline">mumeenonimisi@gmail.com</a></li>
-        <li>WhatsApp: <a href="https://wa.link/9073zd" target="_blank" class="text-green-600 hover:underline">wa.link/9073zd</a></li>
-        <li>Twitter: <a href="https://twitter.com/onimix" target="_blank" class="text-green-600 hover:underline">@onimix</a></li>
+  <!-- Useful Websites Section -->
+  <section class="section-bg-darkgray py-16 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Useful Tools & Sites</h2>
+      <ul class="max-w-3xl mx-auto text-left space-y-3 list-disc list-inside">
+        <li><a href="https://selar.co" class="hover:underline">Selar</a> – Sell digital products easily.</li>
+        <li><a href="https://systeme.io" class="hover:underline">Systeme.io</a> – Funnel builder + email marketing.</li>
+        <li><a href="https://switchy.io" class="hover:underline">Switchy.io</a> – Smart link tracker & shortener.</li>
+        <li><a href="https://gumroad.com" class="hover:underline">Gumroad</a> – Sell to international buyers.</li>
+        <li><a href="https://mailerlite.com" class="hover:underline">MailerLite</a> – Email campaigns made simple.</li>
+        <li><a href="https://carrd.co" class="hover:underline">Carrd</a> – Build stunning one-page sites.</li>
+        <li><a href="https://thrivecart.com" class="hover:underline">ThriveCart</a> – Shopping cart & affiliate management.</li>
+        <li><a href="https://paystack.com" class="hover:underline">Paystack</a> – Nigerian payment gateway.</li>
+        <li><a href="https://flutterwave.com" class="hover:underline">Flutterwave</a> – Online payment infrastructure.</li>
+        <li><a href="https://stripe.com" class="hover:underline">Stripe</a> – Global payments platform.</li>
+        <li><a href="https://clickfunnels.com" class="hover:underline">ClickFunnels</a> – Sales funnel builder.</li>
+        <li><a href="https://leadpages.com" class="hover:underline">Leadpages</a> – Landing page builder.</li>
+        <li><a href="https://getresponse.com" class="hover:underline">GetResponse</a> – Email marketing & automation.</li>
+        <li><a href="https://convertkit.com" class="hover:underline">ConvertKit</a> – Email marketing for creators.</li>
+        <li><a href="https://audience.com" class="hover:underline">Audience</a> – Affiliate marketing software.</li>
+        <li><a href="https://getflywheel.com" class="hover:underline">Flywheel</a> – Managed WordPress hosting.</li>
+        <li><a href="https://kofi.com" class="hover:underline">Ko-fi</a> – Accept donations & sell digital goods.</li>
+        <li><a href="https://patreon.com" class="hover:underline">Patreon</a> – Membership platform for creators.</li>
+        <li><a href="https://zoom.us" class="hover:underline">Zoom</a> – Video conferencing & webinars.</li>
+        <li><a href="https://canva.com" class="hover:underline">Canva</a> – Graphic design made easy.</li>
+        <li><a href="https://ahrefs.com" class="hover:underline">Ahrefs</a> – SEO & marketing tools.</li>
+        <li><a href="https://semrush.com" class="hover:underline">SEMrush</a> – SEO, content & competitive research.</li>
+        <li><a href="https://mailchimp.com" class="hover:underline">Mailchimp</a> – Email marketing & automation.</li>
+        <li><a href="https://buffer.com" class="hover:underline">Buffer</a> – Social media management.</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-  </main>
-
-  <footer class="bg-white text-center p-6 mt-12 border-t text-gray-600 text-sm">
-    &copy; 2025 NairaRoots by Onimix. All rights reserved.
+  <!-- Footer -->
+  <footer class="py-12 text-center">
+    <div class="container mx-auto px-4">
+      <h3 class="text-xl font-semibold mb-2">Stay Connected</h3>
+      <p class="mb-4">Follow or contact us anytime</p>
+      <div class="space-x-6 text-lg">
+        <a href="https://twitter.com/onimix" target="_blank" rel="noopener" aria-label="Twitter" class="hover:text-white">Twitter</a>
+        <a href="mailto:mumeenonimisi@gmail.com" class="hover:text-white">Email</a>
+        <a href="https://wa.me/2348165071331" target="_blank" rel="noopener" class="hover:text-white">WhatsApp</a>
+      </div>
+      <p class="mt-6 text-sm">&copy; 2025 NairaRoots by Onimix. All rights reserved.</p>
+    </div>
   </footer>
-
 </body>
 </html>
