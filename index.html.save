@@ -8,6 +8,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'G-X180F6X9LV');
 </script>
  <meta name="description" content="NairaRoots helps Nigerians discover affiliate marketing, digital products, and ways to make money online with expert tips and tools." />
@@ -205,10 +206,10 @@
 </div>
 
 <div class="product-card bg-white shadow-xl rounded-2xl p-6 mb-6" role="region" aria-label="Facebook Timeline Domination course offer">
-  <img
-    src="facebook-course-promo.png"
-    alt="Facebook Timeline Domination course preview"
-    class="w-full h-auto max-h-72 object-cover rounded-xl mb-4 shadow-md"
+  <img 
+    src="facebook-course-promo.png" 
+    alt="Facebook Timeline Domination course preview" 
+    class="w-full h-auto max-h-72 object-cover rounded-xl mb-4 shadow-md" 
     loading="lazy"
   />
 
@@ -240,10 +241,10 @@
     💰 Real Price: <span class="line-through text-gray-500">$60</span> — <span class="text-orange-600 font-bold">$20 Today via WhatsApp</span>
   </p>
 
-  <a
-    href="https://wa.link/9073zd"
-    target="_blank"
-    rel="noopener noreferrer"
+  <a 
+    href="https://wa.link/9073zd" 
+    target="_blank" 
+    rel="noopener noreferrer" 
     class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
   >
     📲 Get Instant Access for $20
@@ -255,8 +256,8 @@
     Learn ethical hacking on Android.<br>
     <strong>For educational use only.</strong>
   </p>
-  <a href="https://link-locker.com/p/link-unlocker.html#eyJ2IjoiMC4wLjEiLCJlIjoiM0luWEpnWWRWWjBTVktrcmtxRTBXZ1pmM0hQNEtvTGlzZno0NFlpV0xlWDZ5dUQvT0hRUnZCbWdtZXRmMXNsM2FOeHA4NFdQOS9aVWl6TjA0dVhod0RXYmc5bFBJb3dzbXlmUmJYeWpYa01DTm9PTFg0V1JVQT09IiwiaCI6Ik9OSU1JWEFORFJPSURIQUNLSU5HQ09VUlNFIiwiaSI6IlhJeSthMGRlQTFjaXlVVnYifQ=="
-     target="_blank"
+  <a href="https://link-locker.com/p/link-unlocker.html#eyJ2IjoiMC4wLjEiLCJlIjoiM0luWEpnWWRWWjBTVktrcmtxRTBXZ1pmM0hQNEtvTGlzZno0NFlpV0xlWDZ5dUQvT0hRUnZCbWdtZXRmMXNsM2FOeHA4NFdQOS9aVWl6TjA0dVhod0RXYmc5bFBJb3dzbXlmUmJYeWpYa01DTm9PTFg0V1JVQT09IiwiaCI6Ik9OSU1JWEFORFJPSURIQUNLSU5HQ09VUlNFIiwiaSI6IlhJeSthMGRlQTFjaXlVVnYifQ==" 
+     target="_blank" 
      style="background:#0ff; color:#000; padding:12px 25px; border-radius:6px; font-weight:bold; text-decoration:none; display:inline-block;">
     🔓 Unlock Course
   </a>
@@ -292,7 +293,7 @@
 <section id="similola-collection" class="my-8 p-6 bg-black text-[#D4AF37] rounded-lg shadow-lg">
   <h2 class="text-2xl font-bold mb-4" style="color:#D4AF37;">SIMILOLA COLLECTION</h2>
   <p class="mb-4" style="color:#D4AF37;">
-    Join SIMILOLA COLLECTION — Your Ultimate Style Destination!
+    Join SIMILOLA COLLECTION — Your Ultimate Style Destination!  
     Discover the latest trendy outfits, unique designs, and affordable fashion that fits every occasion. Whether you’re looking for casual wear, party looks, or traditional styles, Similola Collection has you covered. Get exclusive deals, style tips, and connect with a community that loves fashion as much as you do!
   </p>
   <ul class="list-disc list-inside mb-4" style="color:#D4AF37;">
@@ -338,34 +339,19 @@
       </ul>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="py-12 text-center">
-    <div class="container mx-auto px-4">
-      <h3 class="text-xl font-semibold mb-2">Stay Connected</h3>
-      <p class="mb-4">Follow or contact us anytime</p>
-      <div class="space-x-6 text-lg">
-        <a href="https://twitter.com/onimix" target="_blank" rel="noopener" aria-label="Twitter" class="hover:text-white">Twitter</a>
-        <a href="mailto:mumeenonimisi@gmail.com" class="hover:text-white">Email</a>
-        <a href="https://wa.me/2348165071331" target="_blank" rel="noopener" class="hover:text-white">WhatsApp</a>
-      </div>
-    </div>
-  </footer>
-<footer>
-  <p style="text-align:center; color:#aaa;">&copy; 2025 NairaRoots by Onimix. All rights reserved.</p>
-</footer>
-
-<!-- 👁️ Visitor Counter -->
-<section style="background:#000; padding:20px; text-align:center;">
-  <h3 style="color:#0ff; font-family:monospace; margin-bottom:10px;">👁️ Total Visitors</h3>
-  <div id="sfctadfye71edwqgtf3bhpk4h2r5z7f6cj7" style="margin:0 auto;"></div>
-  <script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=tadfye71edwqgtf3bhpk4h2r5z7f6cj7&down=async" async></script>
-  <noscript>
-    <a href="https://www.freecounterstat.com" title="web counter code">
-      <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=tadfye71edwqgtf3bhpk4h2r5z7f6cj7" border="0" title="web counter code" alt="web counter code">
-    </a>
-  </noscript>
 </section>
+<!-- Footer -->
+<footer class="py-12 text-center">
+  <div class="container mx-auto px-4">
+    <h3 class="text-xl font-semibold mb-2">Stay Connected</h3>
+    <p class="mb-4">Follow or contact us anytime</p>
+    <div class="space-x-6 text-lg">
+      <a href="https://twitter.com/onimix" target="_blank" rel="noopener" aria-label="Twitter" class="hover:text-white">Twitter</a>
+      <a href="mailto:mumeenonimisi@gmail.com" class="hover:text-white">Email</a>
+      <a href="https://wa.me/2348165071331" target="_blank" rel="noopener" class="hover:text-white">WhatsApp</a>
+    </div>
+    <p class="mt-6 text-sm">&copy; 2025 NairaRoots by Onimix. All rights reserved.</p>
+  </div>
+</footer>
 </body>
 </html>
-  <section class="bg-gradient-to-br from-[#D4AF37] to-[#b7962e] text-black py-20 text-center">
