@@ -1,357 +1,861 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X180F6X9LV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-X180F6X9LV');
-</script>
- <meta name="description" content="NairaRoots helps Nigerians discover affiliate marketing, digital products, and ways to make money online with expert tips and tools." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #000; /* black background */
-      color: #D4AF37; /* golden text */
-    }
-    h1, h2, h3 {
-      font-family: 'Poppins', sans-serif;
-      color: #D4AF37; /* golden headings */
-    }
-    a {
-      color: #D4AF37;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-    .btn-gold {
-      background-color: #D4AF37;
-      color: #000;
-      transition: background-color 0.3s ease;
-    }
-    .btn-gold:hover {
-      background-color: #b7962e;
-      color: #fff;
-    }
-    .section-bg-black {
-      background-color: #000;
-      color: #D4AF37;
-    }
-    .section-bg-darkgray {
-      background-color: #111;
-      color: #D4AF37;
-    }
-    .card {
-      background-color: #111;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 0 15px #D4AF37aa;
-      color: #D4AF37;
-    }
-    img.rounded-full {
-      border: 3px solid #D4AF37;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NairaRoots | Executive Digital Solutions</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #0a192f;
+            --secondary: #112240;
+            --accent: #d4af37;
+            --light: #e6f1ff;
+            --text: #ccd6f6;
+            --white: #ffffff;
+            --dark-gold: #b7962e;
+        }
+        
+        body {
+            background-color: var(--primary);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Header Styles */
+        header {
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--accent);
+            margin-left: 5px;
+        }
+     .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .nav-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--accent);
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--white);
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0 40px;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 700px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .hero h1 span {
+            color: var(--accent);
+            display: block;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            margin: 10px 5px;
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(212, 175, 55, 0.1);
+            transition: all 0.6s ease;
+        }
+        
+        .btn:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .btn:hover:before {
+            left: 100%;
+        }
+    .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+            border: 1px solid var(--accent);
+        }
+        
+        .btn-primary:hover {
+            background: var(--dark-gold);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--accent);
+            margin: 15px auto;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .profile-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: var(--secondary);
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            margin: 0 auto 20px;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-container h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .profile-container p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 60px 0;
+            background: var(--secondary);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        
+        .product-card {
+            background: rgba(10, 25, 47, 0.6);
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        
+        .product-card:hover:before {
+            transform: scaleX(1);
+        }
+            .product-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+        
+        .product-card p {
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .reviews {
+            margin-top: 20px;
+        }
+        
+        .review {
+            background: rgba(17, 34, 64, 0.5);
+            border-left: 3px solid var(--accent);
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .review p {
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .review .reviewer {
+            font-weight: 600;
+            color: var(--accent);
+            font-size: 13px;
+        }
+        
+        /* Affiliate Section */
+        .affiliate {
+            padding: 60px 0;
+        }
+        
+        .affiliate-content {
+            background: rgba(17, 34, 64, 0.6);
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .affiliate-list {
+            columns: 1;
+        }
+        
+        .affiliate-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 15px;
+        }
+        
+        .affiliate-list li:before {
+            content: '•';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+        
+        /* WhatsApp Channel */
+        .channel {
+            padding: 50px 0;
+            background: rgba(17, 34, 64, 0.6);
+            text-align: center;
+            border-radius: 10px;
+            margin: 40px 0;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        /* Similola Collection */
+        .collection {
+            padding: 25px;
+            background: rgba(17, 34, 64, 0.6);
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+        }
+        
+        .collection h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        .collection ul {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .collection li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .collection li:before {
+            content: '✓';
+            color: var(--accent);
+            margin-right: 8px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 50px 0 20px;
+            background: var(--primary);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+        }
+.footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            color: var(--white);
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-column a {
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 15px;
+        }
+        
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent);
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding-top: 15px;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+ @media (min-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .affiliate-list {
+                columns: 2;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Header with 3D Blue Background -->
-  <header class="py-6 bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 shadow-lg shadow-blue-500/40">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-white">NairaRoots</h1>
-      <nav class="space-x-6">
-        <a href="#blog" class="text-yellow-300 hover:text-white font-medium">Blog</a>
-        <a href="#products" class="text-yellow-300 hover:text-white font-medium">Products</a>
-        <a href="#affiliate" class="text-yellow-300 hover:text-white font-medium">Affiliate Tools</a>
-        <a href="#about" class="text-yellow-300 hover:text-white font-medium">About</a>
-        <a href="#contact" class="text-yellow-300 hover:text-white font-medium">Contact</a>
-      </nav>
+    <!-- 3D Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-inner">
+                <div class="logo">
+                    <i class="fas fa-crown"></i>Naira<span>Roots</span>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul id="navMenu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#affiliate">Affiliate</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Executive Digital <span>Solutions</span> for Growth</h1>
+                <p>NairaRoots provides premium affiliate marketing strategies, digital products, and business growth frameworks for forward-thinking entrepreneurs and executives.</p>
+                <div>
+                    <a href="#products" class="btn btn-primary">Explore Products</a>
+                    <a href="#contact" class="btn">Contact Me</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h2 class="section-title">About Our Founder</h2>
+            <div class="about-content">
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <!-- Replace with your image path -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Onimix">
+                    </div>
+                    <h4>Onimix</h4>
+                    <p><strong>Founder & CEO of NairaRoots</strong></p>
+                    <p>Hi, I'm Onimix — founder of NairaRoots. I help Nigerians explore affiliate marketing, digital product creation, and real ways to make money online.</p>
+                    <p>With years of experience in digital entrepreneurship, I've created this platform to simplify the journey for beginners and pros alike, focusing on sustainable business growth and financial empowerment.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Products Section -->
+        <section class="products" id="products">
+            <h2 class="section-title">Premium Digital Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <h3><i class="fas fa-toolbox"></i> Affiliate Starter Toolkit</h3>
+                    <p>Struggling to get affiliate sales? This toolkit gives you ready-to-use templates, email scripts, and proven traffic tips to launch and grow your affiliate business quickly.</p>
+                    <a href="https://wa.link/9073zd" target="_blank" class="btn">Buy Now - WhatsApp</a>
+                    
+                    <div class="reviews">
+                        <div class="review">
+                            <p>"This toolkit made affiliate marketing finally click for me. Clear steps, real Nigerian examples!"</p>
+                            <div class="reviewer">— Amaka T., Enugu</div>
+                        </div>
+                        <div class="review">
+                            <p>"I got 2 leads the first day I applied what I learned."</p>
+                            <div class="reviewer">— David E., Abuja</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <h3><i class="fas fa-book"></i> Smart Side Hustles eBook</h3>
+                    <p>A practical guide to online income streams that work in Nigeria. Discover proven methods to generate additional income with minimal startup costs.</p>
+                    <a href="https://wa.link/9073zd" target="_blank" class="btn">Download on WhatsApp</a>
+                    
+                    <div class="reviews">
+                        <div class="review">
+                            <p>"This ebook opened my eyes to side hustles I never knew existed."</p>
+                            <div class="reviewer">— Samuel O., Lagos</div>
+                        </div>
+                        <div class="review">
+                            <p>"I made my first ₦15,000 in two weeks."</p>
+                            <div class="reviewer">— Chinedu N., Enugu</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <h3><i class="fab fa-facebook"></i> Facebook Timeline Domination</h3>
+                    <p>Turn Your Facebook Timeline Into a Sales Machine — No Ads Needed! Discover organic strategies to generate leads and sales.</p>
+                    <a href="https://wa.link/9073zd" target="_blank" class="btn">Get Instant Access for $20</a>
+                    
+                    <div class="reviews">
+                        <div class="review">
+                            <p>"This course revolutionized how I use Facebook."</p>
+                            <div class="reviewer">— Tunde M., Ibadan</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <h3><i class="fas fa-lock"></i> Android Ethical Hacking Course</h3>
+                    <p>Learn ethical hacking on Android. For educational use only. Gain valuable cybersecurity skills that are in high demand.</p>
+                    <a href="https://link-locker.com/p/link-unlocker.html" target="_blank" class="btn">Unlock Course</a>
+                    
+                    <div class="reviews">
+                        <div class="review">
+                            <p>"Eye-opening course that taught me valuable security skills."</p>
+                            <div class="reviewer">— Emeka C., Port Harcourt</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- WhatsApp Channel -->
+        <section class="channel">
+            <h2 class="section-title">Join My Tech WhatsApp Channel</h2>
+            <p class="mb-6">
+                Get exclusive tech tips, tutorials, and updates anonymously on WhatsApp. Stay informed and connected with the latest in tech!
+            </p>
+            <a href="https://whatsapp.com/channel/0029Vb6Hq0K7YSdCXtjgzt1x" target="_blank" class="btn btn-primary">Join Tech Channel</a>
+        </section>
+        
+        <!-- Affiliate Section -->
+        <section class="affiliate" id="affiliate">
+            <h2 class="section-title">Top Affiliate Programs</h2>
+            <div class="affiliate-content">
+                <ul class="affiliate-list">
+                    <li><strong>Expertnaire</strong> – High-converting Nigerian digital product marketplace.</li>
+                    <li><strong>Selar</strong> – Sell your own or affiliate products easily.</li>
+                    <li><strong>Learnoflix</strong> – Great beginner-friendly offers & payouts.</li>
+                    <li><strong>Systeme.io</strong> – Earn commissions promoting tools people actually need.</li>
+                    <li><strong>Amazon KDP</strong> – Publish ebooks & earn globally.</li>
+                    <li><strong>ClickFunnels</strong> – Sales funnel builder.</li>
+                    <li><strong>Paystack</strong> – Nigerian payment gateway.</li>
+                    <li><strong>Flutterwave</strong> – Online payment infrastructure.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Similola Collection -->
+        <section class="collection">
+            <h3><i class="fas fa-tshirt"></i> SIMILOLA COLLECTION</h3>
+            <p>
+                Your Ultimate Style Destination! Discover the latest trendy outfits, unique designs, and affordable fashion.
+            </p>
+            <ul>
+                <li>Fresh arrivals weekly</li>
+                <li>Perfect outfits for every season</li>
+                <li>Affordable prices & special discounts</li>
+                <li>Easy ordering and fast delivery</li>
+            </ul>
+            <a href="https://chat.whatsapp.com/EEIB5slkBvNIF982hQr8Ic" target="_blank" class="btn">Join Collection</a>
+        </section>
+        
+        <!-- Footer -->
+        <footer id="contact">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>NairaRoots</h3>
+                    <p>Executive digital strategy and transformation services for forward-thinking entrepreneurs.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/onimix" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:mumeenonimisi@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/2348165071331" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> mumeenonimisi@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +234 816 507 1331</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-5PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 NairaRoots Executive Solutions. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="bg-gradient-to-br from-[#D4AF37] to-[#b7962e] text-black py-20 text-center">
-    <div class="container mx-auto px-4">
-      <h1 class="text-4xl font-bold text-blue-700 text-center bg-white p-6 rounded-lg shadow-lg mt-6">
-  Turn Your Passion into Profit
-</h1>
-      <p class="text-lg mb-6">Discover top affiliate programs, smart money-making tips, and powerful tools on NairaRoots.</p>
-      <a href="#blog" class="inline-block btn-gold font-semibold px-6 py-3 rounded-full shadow hover:bg-[#b7962e] transition">Start Exploring</a>
-    </div>
-  </section>
-
-  <!-- SVG Divider -->
-  <div class="-mt-1">
-    <svg class="w-full" viewBox="0 0 1440 100"><path fill="#000" d="M0,64L1440,0L1440,320L0,320Z"></path></svg>
-  </div>
-  <!-- About Me Section -->
-  <section id="about" class="section-bg-black py-16 text-center">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">About Me</h2>
-      <img src="images/oni.jpg" alt="Onimix" class="w-28 h-28 mx-auto rounded-full mb-4 shadow">
-      <p class="text-lg max-w-xl mx-auto">
-        Hi, I'm Onimix — founder of NairaRoots. I help Nigerians explore affiliate marketing, digital product creation, and real ways to make money online. I created this platform to simplify the journey for beginners and pros alike.
-      </p>
-    </div>
-  </section>
-
-  <!-- Products Section -->
-  <section id="products" class="section-bg-darkgray py-16 text-center">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Digital Products</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="card">
-    <h3 class="text-xl font-semibold mb-2">Affiliate Starter Toolkit</h3>
-<p class="mb-4">
-  Struggling to get affiliate sales? This toolkit gives you ready-to-use templates, email scripts, and proven traffic tips to launch and grow your affiliate business quickly. Perfect for beginners and hustlers looking to earn real money online!
-</p>
-<a href="https://wa.link/9073zd" target="_blank" class="inline-block btn-gold px-4 py-2 rounded hover:bg-[#b7962e]">
-  Buy Now - WhatsApp
-</a>
-<!-- Review 1 -->
-<div class="mt-4 bg-white border-l-4 border-yellow-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"This toolkit made affiliate marketing finally click for me. Clear steps, real Nigerian examples, and no fluff!"</p>
-  <p class="mt-2 text-sm font-semibold text-yellow-600">— Amaka T., Enugu</p>
-</div>
-
-<!-- Review 2 -->
-<div class="mt-4 bg-white border-l-4 border-blue-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"I’ve read many guides, but this one gave me actual action steps. I got 2 leads the first day I applied what I learned."</p>
-  <p class="mt-2 text-sm font-semibold text-blue-600">— David E., Abuja</p>
-</div>
-
-<!-- Review 3 -->
-<div class="mt-4 bg-white border-l-4 border-green-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"If you’re starting out with no clue, this is the course you need. Onimix made it easy to follow and implement fast."</p>
-  <p class="mt-2 text-sm font-semibold text-green-600">— Tolu A., Ibadan</p>
-</div>
-
-<!-- Review 4 -->
-<div class="mt-4 bg-white border-l-4 border-pink-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"The templates alone are worth more than the price. I used the email script and got replies from 3 prospects!"</p>
-  <p class="mt-2 text-sm font-semibold text-pink-600">— Zainab B., Kano</p>
-</div>
-
-<!-- Review 5 -->
-<div class="mt-4 bg-white border-l-4 border-purple-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"I was skeptical at first but this ebook delivered. It gave me realistic online business ideas that fit the Nigerian market."</p>
-  <p class="mt-2 text-sm font-semibold text-purple-600">— Chuka N., Port Harcourt</p>
-</div>
-
-<!-- Review 6 -->
-<div class="mt-4 bg-white border-l-4 border-red-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"The WhatsApp support alone makes this worth it. I asked a question and got a detailed reply same day."</p>
-  <p class="mt-2 text-sm font-semibold text-red-600">— Esther M., Ilorin</p>
-</div>
-
-<!-- Review 7 -->
-<div class="mt-4 bg-white border-l-4 border-indigo-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"Simple, powerful, and made for Nigerians. This guide should be in the hands of every serious hustler."</p>
-  <p class="mt-2 text-sm font-semibold text-indigo-600">— Yusuf O., Ogun</p>
-</div>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-semibold mb-2">Smart Side Hustles eBook</h3>
-          <p class="mb-4">A practical guide to online income streams that work in Nigeria.</p>
-  <a href="https://wa.link/9073zd" target="_blank" class="inline-block btn-gold px-4 py-2 rounded hover:bg-[#b7962e]">
-  Download on WhatsApp
-</a>
-<!-- Review 1 -->
-<div class="mt-4 bg-white border-l-4 border-yellow-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"This ebook opened my eyes to side hustles I never knew existed. I started one with less than ₦5k!"</p>
-  <p class="mt-2 text-sm font-semibold text-yellow-600">— Samuel O., Lagos</p>
-</div>
-
-<!-- Review 2 -->
-<div class="mt-4 bg-white border-l-4 border-green-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"I’ve bought other online guides, but this one felt like it was made for Nigerians. Straight to the point."</p>
-  <p class="mt-2 text-sm font-semibold text-green-600">— Mariam A., Abeokuta</p>
-</div>
-
-<!-- Review 3 -->
-<div class="mt-4 bg-white border-l-4 border-blue-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"The hustle ideas in here are practical, not just theory. I already made my first ₦15,000 in two weeks."</p>
-  <p class="mt-2 text-sm font-semibold text-blue-600">— Chinedu N., Enugu</p>
-</div>
-
-<!-- Review 4 -->
-<div class="mt-4 bg-white border-l-4 border-pink-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"What I love most is how Onimix breaks it down. No grammar, just pure hustle advice that works."</p>
-  <p class="mt-2 text-sm font-semibold text-pink-600">— Blessing T., Ilorin</p>
-</div>
-
-<!-- Review 5 -->
-<div class="mt-4 bg-white border-l-4 border-red-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"Thanks to this guide, I started a mini importation hustle and sold out my first batch."</p>
-  <p class="mt-2 text-sm font-semibold text-red-600">— Abdul K., Kaduna</p>
-</div>
-
-<!-- Review 6 -->
-<div class="mt-4 bg-white border-l-4 border-indigo-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"The WhatsApp community link inside the ebook gave me massive support. Highly recommend."</p>
-  <p class="mt-2 text-sm font-semibold text-indigo-600">— Tolu F., Ibadan</p>
-</div>
-
-<!-- Review 7 -->
-<div class="mt-4 bg-white border-l-4 border-purple-400 p-4 rounded shadow-sm">
-  <p class="text-gray-700 italic">"Side hustle tips inside helped me turn my skills into cash, even without laptop or capital."</p>
-  <p class="mt-2 text-sm font-semibold text-purple-600">— Joy E., Port Harcourt</p>
-</div>
-
-<div class="product-card bg-white shadow-xl rounded-2xl p-6 mb-6" role="region" aria-label="Facebook Timeline Domination course offer">
-  <img 
-    src="facebook-course-promo.png" 
-    alt="Facebook Timeline Domination course preview" 
-    class="w-full h-auto max-h-72 object-cover rounded-xl mb-4 shadow-md" 
-    loading="lazy"
-  />
-
-  <h2 class="text-xl font-bold text-gray-800 mb-2">
-    Turn Your Facebook Timeline Into a Sales Machine — No Ads Needed!
-  </h2>
-
-  <p class="text-sm font-bold text-red-600 uppercase mb-2">
-    Access via WhatsApp — Just $20!
-  </p>
-
-  <p class="text-sm text-gray-600 mb-4">
-    🎯 Discover the exact strategies Saurabh Bhatnagar uses to transform Facebook timelines into lead-generating, high-ticket sales platforms — 100% organically. No ads, just smart positioning and consistent content.
-  </p>
-
-  <ul class="list-disc ml-6 text-sm text-gray-700 mb-4">
-    <li>✅ High-converting content strategy</li>
-    <li>✅ Lead magnet positioning</li>
-    <li>✅ Organic funnel building</li>
-    <li>✅ Timeline automation tips</li>
-    <li>✅ Authority positioning hacks</li>
-  </ul>
-
-  <p class="text-sm text-red-600 font-medium mb-2">
-    ⚡ Limited-time offer — price goes up soon!
-  </p>
-
-  <p class="text-base font-semibold text-green-700 mb-4">
-    💰 Real Price: <span class="line-through text-gray-500">$60</span> — <span class="text-orange-600 font-bold">$20 Today via WhatsApp</span>
-  </p>
-
-  <a 
-    href="https://wa.link/9073zd" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
-  >
-    📲 Get Instant Access for $20
-  </a>
-</div>
-<section id="ethical-hacking-course" style="background:#000; color:#0ff; padding:30px 15px; text-align:center; font-family:monospace;">
-  <h2 style="font-size:1.8em; margin-bottom:12px;">🔥 Android Ethical Hacking Course</h2>
-  <p style="font-size:1em; margin-bottom:18px;">
-    Learn ethical hacking on Android.<br>
-    <strong>For educational use only.</strong>
-  </p>
-  <a href="https://link-locker.com/p/link-unlocker.html#eyJ2IjoiMC4wLjEiLCJlIjoiM0luWEpnWWRWWjBTVktrcmtxRTBXZ1pmM0hQNEtvTGlzZno0NFlpV0xlWDZ5dUQvT0hRUnZCbWdtZXRmMXNsM2FOeHA4NFdQOS9aVWl6TjA0dVhod0RXYmc5bFBJb3dzbXlmUmJYeWpYa01DTm9PTFg0V1JVQT09IiwiaCI6Ik9OSU1JWEFORFJPSURIQUNLSU5HQ09VUlNFIiwiaSI6IlhJeSthMGRlQTFjaXlVVnYifQ==" 
-     target="_blank" 
-     style="background:#0ff; color:#000; padding:12px 25px; border-radius:6px; font-weight:bold; text-decoration:none; display:inline-block;">
-    🔓 Unlock Course
-  </a>
-</section>
-        </div>
-      </div>
-    </div>
-  </section>
-<section id="whatsapp-channel" class="py-16 bg-black" style="color:#D4AF37;">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-6" style="color:#D4AF37;">Join My Anonymous Tech WhatsApp Channel</h2>
-    <p class="mb-6 max-w-xl mx-auto" style="color:#D4AF37;">
-      Get exclusive tech tips, tutorials, and updates anonymously on WhatsApp. Stay informed and connected with the latest in tech!
-    </p>
-    <a href="https://whatsapp.com/channel/0029Vb6Hq0K7YSdCXtjgzt1x" target="_blank" rel="noopener noreferrer" class="inline-block btn-gold px-6 py-3 rounded hover:bg-[#b7962e]">
-      Join the WhatsApp Tech Channel
-    </a>
-  </div>
-</section>
-  <!-- Affiliate Tools Section -->
-  <section id="affiliate" class="section-bg-black py-16 text-center">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Top Affiliate Programs</h2>
-      <ul class="max-w-2xl mx-auto text-left space-y-2 list-disc list-inside">
-        <li><strong>Expertnaire</strong> – High-converting Nigerian digital product marketplace.</li>
-        <li><strong>Selar</strong> – Sell your own or affiliate products easily.</li>
-        <li><strong>Learnoflix</strong> – Great beginner-friendly offers & payouts.</li>
-        <li><strong>Systeme.io</strong> – Earn commissions promoting tools people actually need.</li>
-        <li><strong>Amazon KDP</strong> – Publish ebooks & earn globally.</li>
-      </ul>
-    </div>
-  </section>
-<section id="similola-collection" class="my-8 p-6 bg-black text-[#D4AF37] rounded-lg shadow-lg">
-  <h2 class="text-2xl font-bold mb-4" style="color:#D4AF37;">SIMILOLA COLLECTION</h2>
-  <p class="mb-4" style="color:#D4AF37;">
-    Join SIMILOLA COLLECTION — Your Ultimate Style Destination!  
-    Discover the latest trendy outfits, unique designs, and affordable fashion that fits every occasion. Whether you’re looking for casual wear, party looks, or traditional styles, Similola Collection has you covered. Get exclusive deals, style tips, and connect with a community that loves fashion as much as you do!
-  </p>
-  <ul class="list-disc list-inside mb-4" style="color:#D4AF37;">
-    <li>Fresh arrivals weekly</li>
-    <li>Perfect outfits for every season</li>
-    <li>Affordable prices & special discounts</li>
-    <li>Easy ordering and fast delivery</li>
-  </ul>
-  <a href="https://chat.whatsapp.com/EEIB5slkBvNIF982hQr8Ic" target="_blank" class="inline-block btn-gold px-4 py-2 rounded hover:bg-[#b7962e]">
-    Join SIMILOLA COLLECTION
-  </a>
-</section>
-
-  <!-- Useful Websites Section -->
-  <section class="section-bg-darkgray py-16 text-center">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Useful Tools & Sites</h2>
-      <ul class="max-w-3xl mx-auto text-left space-y-3 list-disc list-inside">
-        <li><a href="https://selar.co" class="hover:underline">Selar</a> – Sell digital products easily.</li>
-        <li><a href="https://systeme.io" class="hover:underline">Systeme.io</a> – Funnel builder + email marketing.</li>
-        <li><a href="https://switchy.io" class="hover:underline">Switchy.io</a> – Smart link tracker & shortener.</li>
-        <li><a href="https://gumroad.com" class="hover:underline">Gumroad</a> – Sell to international buyers.</li>
-        <li><a href="https://mailerlite.com" class="hover:underline">MailerLite</a> – Email campaigns made simple.</li>
-        <li><a href="https://carrd.co" class="hover:underline">Carrd</a> – Build stunning one-page sites.</li>
-        <li><a href="https://thrivecart.com" class="hover:underline">ThriveCart</a> – Shopping cart & affiliate management.</li>
-        <li><a href="https://paystack.com" class="hover:underline">Paystack</a> – Nigerian payment gateway.</li>
-        <li><a href="https://flutterwave.com" class="hover:underline">Flutterwave</a> – Online payment infrastructure.</li>
-        <li><a href="https://stripe.com" class="hover:underline">Stripe</a> – Global payments platform.</li>
-        <li><a href="https://clickfunnels.com" class="hover:underline">ClickFunnels</a> – Sales funnel builder.</li>
-        <li><a href="https://leadpages.com" class="hover:underline">Leadpages</a> – Landing page builder.</li>
-        <li><a href="https://getresponse.com" class="hover:underline">GetResponse</a> – Email marketing & automation.</li>
-        <li><a href="https://convertkit.com" class="hover:underline">ConvertKit</a> – Email marketing for creators.</li>
-        <li><a href="https://audience.com" class="hover:underline">Audience</a> – Affiliate marketing software.</li>
-        <li><a href="https://getflywheel.com" class="hover:underline">Flywheel</a> – Managed WordPress hosting.</li>
-        <li><a href="https://kofi.com" class="hover:underline">Ko-fi</a> – Accept donations & sell digital goods.</li>
-        <li><a href="https://patreon.com" class="hover:underline">Patreon</a> – Membership platform for creators.</li>
-        <li><a href="https://zoom.us" class="hover:underline">Zoom</a> – Video conferencing & webinars.</li>
-        <li><a href="https://canva.com" class="hover:underline">Canva</a> – Graphic design made easy.</li>
-        <li><a href="https://ahrefs.com" class="hover:underline">Ahrefs</a> – SEO & marketing tools.</li>
-        <li><a href="https://semrush.com" class="hover:underline">SEMrush</a> – SEO, content & competitive research.</li>
-        <li><a href="https://mailchimp.com" class="hover:underline">Mailchimp</a> – Email marketing & automation.</li>
-        <li><a href="https://buffer.com" class="hover:underline">Buffer</a> – Social media management.</li>
-      </ul>
-    </div>
-  </section>
-</section>
-<!-- Footer -->
-<footer class="py-12 text-center">
-  <div class="container mx-auto px-4">
-    <h3 class="text-xl font-semibold mb-2">Stay Connected</h3>
-    <p class="mb-4">Follow or contact us anytime</p>
-    <div class="space-x-6 text-lg">
-      <a href="https://twitter.com/onimix" target="_blank" rel="noopener" aria-label="Twitter" class="hover:text-white">Twitter</a>
-      <a href="mailto:mumeenonimisi@gmail.com" class="hover:text-white">Email</a>
-      <a href="https://wa.me/2348165071331" target="_blank" rel="noopener" class="hover:text-white">WhatsApp</a>
-    </div>
-    <p class="mt-6 text-sm">&copy; 2025 NairaRoots by Onimix. All rights reserved.</p>
-  </div>
-</footer>
+<script>
+        // Initialize Three.js particle system
+        function initParticleBackground() {
+            const canvas = document.getElementById('particle-canvas');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ 
+                canvas,
+                alpha: true,
+                antialias: true
+            });
+            
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            
+            // Create particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 1500;
+            const posArray = new Float32Array(particlesCount * 3);
+            const colorArray = new Float32Array(particlesCount * 3);
+            
+            for(let i = 0; i < particlesCount * 3; i += 3) {
+                // Position
+                posArray[i] = (Math.random() - 0.5) * 50;
+                posArray[i+1] = (Math.random() - 0.5) * 50;
+                posArray[i+2] = (Math.random() - 0.5) * 50;
+                
+                // Color (gold variations)
+                colorArray[i] = 0.85 + Math.random() * 0.15; // R
+                colorArray[i+1] = 0.75 + Math.random() * 0.2; // G
+                colorArray[i+2] = 0.2 + Math.random() * 0.1; // B
+            }
+            
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colorArray, 3));
+            
+            // Material
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.1,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.7,
+                sizeAttenuation: true
+            });
+            
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+            
+            camera.position.z = 5;
+            
+            // Animation
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                particlesMesh.rotation.x += 0.001;
+                particlesMesh.rotation.y += 0.001;
+                
+                renderer.render(scene, camera);
+            }
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+            
+            animate();
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            initParticleBackground();
+            
+            // Mobile menu toggle
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('show');
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        // Close mobile menu if open
+                        navMenu.classList.remove('show');
+                        
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
