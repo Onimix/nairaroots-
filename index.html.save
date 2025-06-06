@@ -80,7 +80,8 @@
             color: var(--accent);
             margin-left: 5px;
         }
-     .logo i {
+        
+        .logo i {
             margin-right: 10px;
             color: var(--accent);
         }
@@ -120,8 +121,7 @@
             background-color: var(--accent);
             transition: width 0.3s ease;
         }
-        
-        nav a:hover {
+nav a:hover {
             color: var(--white);
         }
         
@@ -199,7 +199,8 @@
         .btn:hover:before {
             left: 100%;
         }
-    .btn-primary {
+        
+        .btn-primary {
             background: var(--accent);
             color: var(--primary);
             border: 1px solid var(--accent);
@@ -275,8 +276,7 @@
             margin-bottom: 10px;
             color: var(--white);
         }
-        
-        .profile-container p {
+profile-container p {
             margin-bottom: 15px;
             line-height: 1.7;
         }
@@ -319,7 +319,8 @@
         .product-card:hover:before {
             transform: scaleX(1);
         }
-            .product-card h3 {
+        
+        .product-card h3 {
             font-size: 22px;
             margin-bottom: 15px;
             color: var(--white);
@@ -436,7 +437,8 @@
             border-top: 1px solid rgba(212, 175, 55, 0.2);
             text-align: center;
         }
-.footer-content {
+        
+        .footer-content {
             display: grid;
             grid-template-columns: 1fr;
             gap: 30px;
@@ -547,7 +549,8 @@
                 text-align: center;
             }
         }
- @media (min-width: 768px) {
+        
+        @media (min-width: 768px) {
             .product-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -599,25 +602,7 @@
                 </div>
             </div>
         </section>
-        
-        <!-- About Section -->
-        <section class="about" id="about">
-            <h2 class="section-title">About Our Founder</h2>
-            <div class="about-content">
-                <div class="profile-container">
-                    <div class="profile-image">
-                        <!-- Replace with your image path -->
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Onimix">
-                    </div>
-                    <h4>Onimix</h4>
-                    <p><strong>Founder & CEO of NairaRoots</strong></p>
-                    <p>Hi, I'm Onimix — founder of NairaRoots. I help Nigerians explore affiliate marketing, digital product creation, and real ways to make money online.</p>
-                    <p>With years of experience in digital entrepreneurship, I've created this platform to simplify the journey for beginners and pros alike, focusing on sustainable business growth and financial empowerment.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Products Section -->
+<!-- Products Section -->
         <section class="products" id="products">
             <h2 class="section-title">Premium Digital Products</h2>
             <div class="product-grid">
@@ -756,7 +741,8 @@
             </div>
         </footer>
     </div>
-<script>
+    
+    <script>
         // Initialize Three.js particle system
         function initParticleBackground() {
             const canvas = document.getElementById('particle-canvas');
@@ -800,45 +786,7 @@
                 opacity: 0.7,
                 sizeAttenuation: true
             });
-            
-            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-            scene.add(particlesMesh);
-            
-            camera.position.z = 5;
-            
-            // Animation
-            function animate() {
-                requestAnimationFrame(animate);
-                
-                particlesMesh.rotation.x += 0.001;
-                particlesMesh.rotation.y += 0.001;
-                
-                renderer.render(scene, camera);
-            }
-            
-            // Handle window resize
-            window.addEventListener('resize', () => {
-                camera.aspect = window.innerWidth / window.innerHeight;
-                camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight);
-            });
-            
-            animate();
-        }
-        
-        // Initialize when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            initParticleBackground();
-            
-            // Mobile menu toggle
-            const navToggle = document.getElementById('navToggle');
-            const navMenu = document.getElementById('navMenu');
-            
-            navToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('show');
-            });
-            
-            // Smooth scrolling for anchor links
+// Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
